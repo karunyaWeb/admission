@@ -6,6 +6,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css
+">
     <title>Karunya Institute of Technology and Sciences</title>
     <!-- Template CSS Style link -->
     <link rel="stylesheet" href="assets/css/style-starter.css">
@@ -15,8 +20,8 @@
     <!-- header -->
     <header id="site-header" class="fixed-top">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="index.html">
+            <nav class="navbar focus-in-contract-bck navbar-expand-lg navbar-light">
+                <a class=" slide-in-elliptic-top-fwd navbar-brand" href="index.html">
                     Karunya <span>EDU</span>
                 </a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
@@ -26,7 +31,7 @@
                     <span class="navbar-toggler-icon fa icon-close fa-times"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll">
+                    <ul class=" slide-in-elliptic-top-bck navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">Why Karunya</a>
                         </li>
@@ -72,14 +77,42 @@
             <div class="col-md-6 banner-left pt-md-0 pt-5 pb-md-0 pb-sm-4">
                 <div class="container pt-md-0 pt-5">
                     <div class="banner-info ps-xxl-5 ps-xl-0 ps-5 ms-lg-5 py-md-0 py-5">
-                        <p class="mb-1"><strong> Institute of Technology and Sciences</strong></p>
+                        <div class="focus-in-contract-bck">
+                            <div class="animate three">
+                                <span>K</span><span>a</span><span>r</span><span>u</span><span>n</span><span>y</span><span>a</span>
+                                <span>I</span><span>n</span><span>s</span><span>t</span><span>i</span><span>t</span><span>u</span><span>t</span><span>e</span>
+                                <span>o</span><span>f</span>
+                                <span>T</span><span>e</span><span>c</span><span>h</span><span>n</span><span>o</span><span>l</span><span>o</span><span>g</span><span>y</span>
+                                <span>a</span><span>n</span><span>d</span>
+                                <span>S</span><span>c</span><span>i</span><span>e</span><span>n</span><span>c</span><span>e</span>
+                            </div>
+                       
                         <p>KITS is a Nationally Ranked, Fully Residential, Private Christian University in India.
                         If you can picture yourself exploring the field of your interest,
                         excelling in Academics motivated by great teachers,
                         growing spiritually guided by caring mentors and
                         becoming a wholesome personality to bring a change in the world and to lead,
                         Karunya is the right place for you!</p>
-                        <a class="btn btn-style btn-style-2 mt-sm-5 mt-4" href="#">Get Started</a>
+                        <style>
+                        p {
+                            animation-duration: 3s;
+                            animation-name: slidein;
+                          }
+                          
+                          @keyframes slidein {
+                            from {
+                              margin-left: 100%;
+                              width: 300%;
+                            }
+                          
+                            to {
+                              margin-left: 0%;
+                              width: 100%;
+                            }
+                          }
+                        </style>
+                        <a class="  btn btn-style btn-style-2 mt-sm-5 mt-4" href="#">Get Started</a>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -119,7 +152,7 @@
                 <h3 class="title-style">Programs Offered</h3>
             </div>
             <div class="row no-gutters pt-4">
-                <div class="col-lg-4 box-pricing">
+                <div class="bounce-in-top col-lg-4 box-pricing">
                     <h3 class="text-price">Research </h3>
                     
                     <ul>
@@ -149,7 +182,7 @@
                     <a href="#button" class="btn btn-style btn-style-2 mt-4">Get Started</a>
                 </div> -->
 
-                <div class="col-lg-4 box-pricing">
+                <div class="bounce-in-bottom col-lg-4 box-pricing">
                     <h3 class="text-price">Lateral entry program</h3>
                     
                     <ul>
@@ -161,7 +194,7 @@
                     </ul>
                    
                 </div>
-                <div class="col-lg-4 box-pricing">
+                <div class="bounce-in-top col-lg-4 box-pricing">
                     <h3 class="text-price">Under graduate program</h3>
                     
                     <ul>
@@ -664,6 +697,21 @@ function addAnimation() {
             });
         });
     </script>
+     <script>
+      
+    
+    $(function(){
+        $('.repeat').click(function(){
+            var classes =  $(this).parent().attr('class');
+            $(this).parent().attr('class', 'animate');
+            var indicator = $(this);
+            setTimeout(function(){ 
+                $(indicator).parent().addClass(classes);
+            }, 24);
+        });
+    });
+    
+      </script>
     <!-- //MENU-JS -->
 
     <!-- disable body scroll which navbar is in active -->
@@ -674,6 +722,7 @@ function addAnimation() {
             })
         });
     </script>
+    
     <!-- //disable body scroll which navbar is in active -->
 
     <!-- bootstrap -->
